@@ -1,42 +1,52 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+body{
+  background-color: #F3F3F3;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.bar-chart-container > h1{
+  margin-bottom: 1em;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bar-chart-container{
+  width: 100vw;
+  height: 100%;
+  margin-left: 3em;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
+.bar-chart{
+  background-color: white;
+  width: 70vw;
+  border-radius: 8px;
   padding: 2em;
 }
 
-.read-the-docs {
-  color: #888;
+@media (max-width: 480px){
+
+  .bar-chart-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin-left: 1rem;
+  }
+  .bar-chart-container > h1{
+    font-size: 1rem;
+    margin-bottom: 1.5em;
+  }
+  .bar-chart{
+    margin-left: 1em;
+  }
+}
+
+@media (min-width: 481px)and (max-width: 768px){
+  .bar-chart-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin-left: 1rem;
+  }
+
+  .bar-chart-container > h1{
+    font-size: 1.5rem;
+  }
+  .bar-chart{
+    margin-left: 1em;
+  }
 }

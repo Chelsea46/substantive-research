@@ -40,7 +40,7 @@ function GraphContextProvider(props) {
         return {
           id: sectorId,
           name: sectorName,
-          count: percentage,
+          count: percentage.toFixed(2),
         };
       });
 
