@@ -1,8 +1,15 @@
-# React + Vite
+Improvements for the App:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+1. Utilise the date from the data given from the API to filter sectors
+interactions based on the day/week/month, to see how different sectors
+perform on different times of the year.
 
-Currently, two official plugins are available:
+2. Be able to select sectors and see more information i.e the company names,
+dates of interactions, and contact details.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+How to run the App:
+
+Run the following commands in the project root folder -
+
+npm install
+npm run dev

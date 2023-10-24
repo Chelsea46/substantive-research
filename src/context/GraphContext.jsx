@@ -10,7 +10,7 @@ function GraphContextProvider(props) {
 
   async function fetchApiData() {
     try {
-      const response = await axios.get('https://substantive.pythonanywhere.com/')
+      const response = await axios.get('https://substantive.pythonanywhere.com/');
       setApiData(response.data.interactions);
     } catch (error) {
       console.error('Error fetching API data: ', error);
@@ -23,7 +23,6 @@ function GraphContextProvider(props) {
 
   useEffect(() => {
     if (Array.isArray(apiData) && apiData.length > 0) {
-      // Calculate the count of interactions for each sector_id
       const interactionsCount = {};
 
       apiData.forEach(interaction => {
@@ -31,7 +30,6 @@ function GraphContextProvider(props) {
         interactionsCount[sectorId] = (interactionsCount[sectorId] || 0) + 1;
       });
 
-      // Create a new array of objects with id, name, and count
       const newInteractionsData = Object.keys(interactionsCount).map(sectorId => {
         const count = interactionsCount[sectorId];
         const sectorName = apiData.find(interaction => interaction.sector_id === sectorId).name;
@@ -48,7 +46,6 @@ function GraphContextProvider(props) {
     }
   }, [apiData]);
 
-    // values to pass to components
   const value = {
     interactionsData,
   };
